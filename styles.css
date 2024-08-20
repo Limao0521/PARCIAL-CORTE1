@@ -71,10 +71,11 @@ header.main-header{
     align-items: center;
     top: 50%;
     flex-basis:15%;
+    padding-top: 0.1px;
 }
 .logo{
     width: 15vw;
-    height: 12vh;
+    height: 18vh;
 }
 
 /**Menu header**/
@@ -120,19 +121,19 @@ i.toggle-menu img{
 }
 
 i.toggle-menu{
-    /*display: none;*/
+    /**display: none;**/
     background-color: white;
     border: none;
     z-index: 9999;
 }
 
-input #check{
+input#check{
     display: none;
 }
 
 @media (min-width: 880px){
     .header-wrap{
-        padding: 0.5rem 5rem;
+        padding: 0.5rem 0rem;
     }
 }
 @media (max-width: 768px){
@@ -156,6 +157,10 @@ input #check{
     }
     .logo, li.menu-item a{
         color: var(--blue-c);
+    }
+    .logo{
+        height: 50px;
+        width: 50px;
     }
 
     i.toggle-menu{
