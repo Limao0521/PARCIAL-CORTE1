@@ -1,0 +1,46 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.Nombres1,.Nombres2,.Nombres3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.div2 {
+    grid-area: 3 / 1 / 5 / 3;
+}
+
+.div3 {
+    grid-area: 5 / 1 / 7 / 3;
+}
+.carrito{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.agregar{
+    background-color: #50bf83;
+    border-radius: 10px;
+    height: 70px;
+    width:70px;
+
+}
+@media (max-width: 1000px) {
+    .Nombres1, .Nombres2, .Nombres3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .carrito{
+        grid-template-columns: 1fr;
+    }
+}
