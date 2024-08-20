@@ -1,0 +1,194 @@
+:root{
+    --green-c: #1CA45C;
+    --darkgreen-c: #007A42;
+    --pasta-c:  #EEBE02;
+    --blue-c: #1E2130;
+}
+
+/** Estilos generales **/
+
+html{
+    font-family: "Cinzel", serif;
+}
+
+body{
+    margin:0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h4{
+    font-size: 1.6rem;
+}
+h5{
+    font-size: 1.4rem;
+}
+h6{
+    font-size: 1.2rem;
+}
+
+/** HEADER restaurante **/
+
+header.main-header{
+    position: relative;
+    top:0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: transparent;
+    z-index: 999;
+}
+.wrap-logo-header{
+    display: flex;
+    align-items: center;
+    top: 50%;
+    flex-basis:15%;
+}
+.logo{
+    width: 15vw;
+    height: 12vh;
+}
+
+/**Menu header**/
+.nav-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.wrap-nav-header{
+    display: flex;
+    flex-basis: 50%;
+}
+
+ul.main-menu{
+    display: flex;
+    width: 100%;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+li.menu-item{
+    margin: 0.75rem;
+    display: flex;
+}
+
+li.menu-item a{
+    padding: 0.5rem 1rem;
+    /**color: white;**/
+}
+
+li.menu-item a:hover{
+    color: var(--pasta-c);
+}
+
+i.toggle-menu img{
+    width: 27px;
+    z-index: 99;
+}
+
+i.toggle-menu{
+    /*display: none;*/
+    background-color: white;
+    border: none;
+    z-index: 9999;
+}
+
+input #check{
+    display: none;
+}
+
+@media (min-width: 880px){
+    .header-wrap{
+        padding: 0.5rem 5rem;
+    }
+}
+@media (max-width: 768px){
+    header.main-header{
+        margin-bottom: 4rem;
+    }
+    .header-wrap{
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        padding: 0;
+        top: 0;
+        z-index: 9999;
+        height: 60px;
+    }
+    .wrap-logo-header{
+        position: fixed;
+        z-index: 999;
+        top: 3%;
+        left: 2%;
+    }
+    .logo, li.menu-item a{
+        color: var(--blue-c);
+    }
+
+    i.toggle-menu{
+        display: flex;
+    }
+    ul.main-menu{
+        display: none;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        background-color: white;
+    }
+    label.checkbtn{
+        position: fixed;
+        right: 3%;
+        top: 3%;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    #check:checked ~ ul{
+        display: flex;
+        z-index: 9;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        top: 0;
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
