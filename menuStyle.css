@@ -23,6 +23,7 @@ body {
     background-color: #FAF3E0;
     padding: 20px;
     border-radius: 10px;
+    padding-left: 10px;
 }
 
 .div1 {
@@ -62,6 +63,9 @@ h1 {
 h2 {
     color: #1E2130;
     margin: 0;
+    display: flex; /* Convierte el h2 en un contenedor flexible */
+    justify-content: space-between; /* Distribuye el espacio entre el texto y el botón */
+    align-items: center; /* Alinea verticalmente el contenido */
 }
 
 h4 {
@@ -76,14 +80,22 @@ h4 {
 }
 
 .agregar {
-    background-color: #9AA97B;
-    border-radius: 10px;
-    height: 30px;
-    width: 30px;
-    color: #fff;
-    border: none;
-    transition: transform 0.3s;
+    display: inline-flex; /* Usamos inline-flex para que el botón se ajuste al contenido */
+    align-items: center;  /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 8px; /* Ajusta el relleno según sea necesario */
+    background-color: #9AA97B; /* Color de fondo del botón */
+    border: 0; /* Elimina los bordes del botón */
+    cursor: pointer; /* Cambia el cursor cuando se coloca sobre el botón */
+    transition: all 0.3s; /* Agrega una transición suave al botón */
+    border-radius: 25%;
 }
+
+.agregar .material-symbols-outlined {
+    font-size: 24px; /* Ajusta el tamaño del ícono */
+    color: #ffffff; /* Color del ícono */
+}
+
 
 .agregar:hover {
     cursor: pointer;
@@ -93,6 +105,10 @@ h4 {
 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+p {
+    text-align: right;
 }
 
 @media (max-width: 1000px) {
