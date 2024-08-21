@@ -24,6 +24,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     padding-left: 10px;
+    
 }
 
 .div1 {
@@ -32,9 +33,53 @@ body {
 }
 
 .img-div1 {
-    grid-column: 2 / 3;
-    /* Segunda columna */
+    display: grid; /* Activa el layout de cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas de igual tamaño */
+    gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+    position: relative; /* Necesario para posicionar el pseudo-elemento de texto */
 }
+
+.img-div1 img {
+    width: 100%; /* Ajusta las imágenes al ancho de las celdas de la cuadrícula */
+    height: 200px; /* Define una altura fija para las imágenes */
+    object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Añade transición para el zoom y la opacidad */
+    border-radius: 20px; /* Bordes redondeados para las imágenes */
+    position: relative; /* Asegura que el texto overlay esté posicionado relativamente */
+}
+
+.img-div1 img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    opacity: 0.8; /* Reduce la opacidad */
+}
+
+.overlay {
+    position: absolute; /* Posiciona el texto de manera absoluta */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar el texto */
+    color: white; /* Color del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
+    width: 90%; /* Asegura que el texto no se salga del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    line-height: 1.4; /* Mejora la legibilidad del texto */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave para la visibilidad */
+}
+
+.img-div1 img:hover + .overlay {
+    opacity: 1; /* Muestra el texto cuando se pasa el mouse sobre la imagen */
+}
+
+
+
+
 
 .div2 {
     grid-column: 1 / 2;
@@ -42,9 +87,50 @@ body {
 }
 
 .img-div2 {
-    grid-column: 2 / 3;
-    /* Segunda columna */
+    display: grid; /* Activa el layout de cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas de igual tamaño */
+    gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+    position: relative; /* Necesario para posicionar el pseudo-elemento de texto */
 }
+
+.img-div2 img {
+    width: 100%; /* Ajusta las imágenes al ancho de las celdas de la cuadrícula */
+    height: 200px; /* Define una altura fija para las imágenes */
+    object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Añade transición para el zoom y la opacidad */
+    border-radius: 20px; /* Bordes redondeados para las imágenes */
+    position: relative; /* Asegura que el texto overlay esté posicionado relativamente */
+}
+
+.img-div2 img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    opacity: 0.8; /* Reduce la opacidad */
+}
+
+.overlay {
+    position: absolute; /* Posiciona el texto de manera absoluta */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar el texto */
+    color: white; /* Color del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
+    width: 90%; /* Asegura que el texto no se salga del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    line-height: 1.4; /* Mejora la legibilidad del texto */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave para la visibilidad */
+}
+
+.img-div2 img:hover + .overlay {
+    opacity: 1; /* Muestra el texto cuando se pasa el mouse sobre la imagen */
+}
+
 
 .div3 {
     grid-column: 1 / 2;
@@ -52,9 +138,50 @@ body {
 }
 
 .img-div3 {
-    grid-column: 2 / 3;
-    /* Segunda columna */
+    display: grid; /* Activa el layout de cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas de igual tamaño */
+    gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+    position: relative; /* Necesario para posicionar el pseudo-elemento de texto */
 }
+
+.img-div3 img {
+    width: 100%; /* Ajusta las imágenes al ancho de las celdas de la cuadrícula */
+    height: 200px; /* Define una altura fija para las imágenes */
+    object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Añade transición para el zoom y la opacidad */
+    border-radius: 20px; /* Bordes redondeados para las imágenes */
+    position: relative; /* Asegura que el texto overlay esté posicionado relativamente */
+}
+
+.img-div3 img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    opacity: 0.8; /* Reduce la opacidad */
+}
+
+.overlay {
+    position: absolute; /* Posiciona el texto de manera absoluta */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar el texto */
+    color: white; /* Color del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
+    width: 90%; /* Asegura que el texto no se salga del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    line-height: 1.4; /* Mejora la legibilidad del texto */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave para la visibilidad */
+}
+
+.img-div3 img:hover + .overlay {
+    opacity: 1; /* Muestra el texto cuando se pasa el mouse sobre la imagen */
+}
+
 
 h1 {
     color: #556B2F;
@@ -71,6 +198,7 @@ h2 {
 h4 {
     color: #C0A080;
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .carrito {
