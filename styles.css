@@ -52,7 +52,7 @@ h6{
 
 /*Enlaces*/
 .cta-main{
-    background-color: var(--green-c);
+    background-color: #556B2F;
     padding: 0.5rem 1rem;
     color: white;
     font-size: bold;
@@ -131,14 +131,14 @@ i.toggle-menu img{
 }
 
 i.toggle-menu{
-    /**display: none;**/
+    display: none;
     background-color: white;
     border: none;
     z-index: 9999;
 }
 
 input#check{
-    display: none;
+    /**display: none;**/
 }
 
 @media (min-width: 880px){
@@ -241,6 +241,7 @@ input#check{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     min-height: 50vh;
     background-color: var(--blue-c);
     gap: 1rem;
