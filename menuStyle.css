@@ -381,11 +381,7 @@ p {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
-  
-.cart-footer {
-    padding: 20px;
-    color: var(--text-color-white);
-}
+
 .Vaciar {
     background-color: var(--button-bg-delete-color);
     color: var(--text-color-white);
@@ -429,7 +425,7 @@ p {
     transition: all 0.3s;
     border-radius: 25%;
     color: var(--text-color-white);
-    margin-left: 20px;
+    margin-left: 10px;
     /* Separa el botón del borde derecho */
 }
 
@@ -462,6 +458,7 @@ p {
 .cerrar-carrito:hover {
     background-color: var(--secondary-color);
     transition: all 0.3s;
+    transform: scale(1.2);
 }
 
 /* header */
