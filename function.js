@@ -1,6 +1,5 @@
-
+const carrito = document.querySelector('.Carrito-compras');
 function abrirCarrito() {
-    const carrito = document.querySelector('.Carrito-compras'); // 1
     const carritoVisible = carrito.classList.contains('visible'); // 2
     const body = document.body; // 3
 
@@ -29,4 +28,9 @@ function agregaraCarrito(){
 
     const contadorPrincipal = document.querySelector('.contador-principal');
     contadorPrincipal.textContent = totalSum;
+}
+
+function cerrarCarrito() {
+    carrito.classList.remove('visible');
+    body.classList.remove('no-scroll'); // Permitir el desplazamiento del fondo nuevamente
 }
