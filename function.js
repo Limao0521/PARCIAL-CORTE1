@@ -32,5 +32,6 @@ function agregaraCarrito(){
 
 function cerrarCarrito() {
     carrito.classList.remove('visible');
-    body.classList.remove('no-scroll'); // Permitir el desplazamiento del fondo nuevamente
+    document.body.classList.remove('no-scroll');
+    console.log('Carrito cerrado, desplazamiento habilitado');
 }
