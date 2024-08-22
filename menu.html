@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="function.js" defer></script>
 </head>
@@ -46,6 +48,20 @@
                 <button class="cerrar-carrito" onclick="cerrarCarrito()">
                     <span class="material-symbols-outlined">close</span>
             </div>
+            <div class="productos-carrito">
+                <div class="producto">
+                    <h4 class="nombre-producto">Carpaccio</h4>
+                    <span class="cantidad">
+                        <p>Cantidad: </p>
+                        <button>+</button>
+                        <span class="cantidad-producto">-</span>
+                        <button>-</button>
+                    </span>
+                    <button class="eliminar"><span class="material-symbols-outlined">
+                        delete
+                        </span></button>
+                </div>
+            </div>
             <div class="total-carrito">
                 <div class="datos-carrito">
                     <div class="subtotal">
@@ -53,8 +69,8 @@
                         <Span class="valor"></SPan>
                     </div>
                     <div class="envio">
-                        <h4>delivery</h4>
-                            <Span class="valor-envio">Por calcular</SPan>
+                        <h4>Delivery</h4>
+                        <Span class="valor-envio">Por calcular</SPan>
                     </div>
                     <div class="total">
                         <h4>Total</h4>
