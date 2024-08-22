@@ -9,7 +9,11 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
     <script src="function.js" defer></script>
 </head>
 
@@ -18,7 +22,7 @@
         <div class="header-wrap">
             <div class="wrap-logo-header">
                 <a class="logo-header">
-                    <img class="logo" src="img/logoSVG.svg">
+                    <img class="logomenu" src="img/logoSVG.svg">
                 </a>
             </div>
             <div class="wrap-nav-header">
@@ -42,6 +46,23 @@
                 <button class="cerrar-carrito" onclick="cerrarCarrito()">
                     <span class="material-symbols-outlined">close</span>
             </div>
+            <div class="total-carrito">
+                <div class="datos-carrito">
+                    <div class="subtotal">
+                        <h4>Subtotal</h4>
+                        <Span class="valor"></SPan>
+                    </div>
+                    <div class="envio">
+                        <h4>delivery</h4>
+                            <Span class="valor-envio">Por calcular</SPan>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <Span class="valor"></SPan>
+                    </div>
+                </div>
+                <button class="boton-pagar">Ir a pagar</button>
+            </div>
         </aside>
         <div class="parent">
             <div class="div1">
@@ -49,7 +70,7 @@
                 <div class="Nombres1">
                     <div>
                         <h2>Carpaccio veneciano
-                            <button class="agregar"id="Carpaccio-veneciano"  onclick="agregaraCarrito()">
+                            <button class="agregar" id="Carpaccio-veneciano" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -62,7 +83,7 @@
                     </div>
                     <div>
                         <h2>Croquetas de hongos
-                            <button class="agregar" id="Croquetas de hongos"  onclick="agregaraCarrito()">
+                            <button class="agregar" id="Croquetas de hongos" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -88,7 +109,7 @@
                     </div>
                     <div>
                         <h2>Tabla de quesos
-                            <button class="agregar" id="Tabla de quesos"  onclick="agregaraCarrito()">
+                            <button class="agregar" id="Tabla de quesos" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -117,7 +138,8 @@
                 <div class="Nombres2">
                     <div>
                         <h2>Ravioli de maiz dulce y queso ricotta
-                            <button class="agregar" id="Ravioli de maiz dulce y queso ricotta" onclick="agregaraCarrito()">
+                            <button class="agregar" id="Ravioli de maiz dulce y queso ricotta"
+                                onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -143,7 +165,7 @@
                     </div>
                     <div>
                         <h2>Capelletti de queso fontina
-                            <button class="agregar" id="Capelletti de queso fontina"onclick="agregaraCarrito()">
+                            <button class="agregar" id="Capelletti de queso fontina" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -156,7 +178,7 @@
                     </div>
                     <div>
                         <h2>Tortelli Tartufo
-                            <button class="agregar" id="Tortelli Tartufo"onclick="agregaraCarrito()">
+                            <button class="agregar" id="Tortelli Tartufo" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -266,7 +288,7 @@
                     </div>
                     <div>
                         <h2>Jugos de frutos rojos
-                            <button class="agregar"id="Jugo de frutos rojos" onclick="agregaraCarrito()">
+                            <button class="agregar" id="Jugo de frutos rojos" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -306,10 +328,12 @@
                 <!-- Aquí puedes agregar las imágenes de Postres -->
                 <img class="imagen-divImage4" src="img/Juice frutos amarillos.jpg" alt="Jugo de frutos amarillos"> <span
                     class="overlay">Jugo de frutos amarillos</span>
-                <img class="imagen-divImage4" src="img/Juice frutos rojos.jpg" alt="Jugo de frutos rojos"> <span class="overlay">Jugo de frutos rojos</span>
-                <img class="imagen-divImage4" src="img/Coco limonade.jpg" alt="Limonada de coco"> <span class="overlay">Limonada de coco</span>
-                <img class="imagen-divImage4" src="img/water.jpg" alt="Agua Manantial"> <span
-                    class="overlay">Agua Manantial</span>
+                <img class="imagen-divImage4" src="img/Juice frutos rojos.jpg" alt="Jugo de frutos rojos"> <span
+                    class="overlay">Jugo de frutos rojos</span>
+                <img class="imagen-divImage4" src="img/Coco limonade.jpg" alt="Limonada de coco"> <span
+                    class="overlay">Limonada de coco</span>
+                <img class="imagen-divImage4" src="img/water.jpg" alt="Agua Manantial"> <span class="overlay">Agua
+                    Manantial</span>
             </div>
             <div class="div5">
                 <h1>Cóctel</h1>
@@ -322,7 +346,8 @@
                             </button>
                         </h2>
                         <div class="carrito">
-                            <h4>Ron 7 años,Aperit,limón,dulce de flor de jamica,hierbabuena y Fever Tree ginger beer</h4>
+                            <h4>Ron 7 años,Aperit,limón,dulce de flor de jamica,hierbabuena y Fever Tree ginger beer
+                            </h4>
                             <p>$10,900</p>
                         </div>
                     </div>
@@ -340,7 +365,7 @@
                     </div>
                     <div>
                         <h2>Bellini rosso
-                            <button class="agregar"  id="Bellini rosso" onclick="agregaraCarrito()">
+                            <button class="agregar" id="Bellini rosso" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
@@ -352,13 +377,14 @@
                     </div>
                     <div>
                         <h2>Le moratto
-                            <button class="agregar"  id="Le moratto" onclick="agregaraCarrito()">
+                            <button class="agregar" id="Le moratto" onclick="agregaraCarrito()">
                                 <span class="material-symbols-outlined">add_shopping_cart</span>
                                 <span class="contador"></span>
                             </button>
                         </h2>
                         <div class="carrito">
-                            <h4>Destilado de feijoa,Vodka infusionado en té butterfly pea,licor marrasquino,limón y prosecco</h4>
+                            <h4>Destilado de feijoa,Vodka infusionado en té butterfly pea,licor marrasquino,limón y
+                                prosecco</h4>
                             <p>$8,900</p>
                         </div>
                     </div>
@@ -368,10 +394,12 @@
                 <!-- Aquí puedes agregar las imágenes de Postres -->
                 <img class="imagen-divImage5" src="img/Solarium Coctel.jpg" alt="Coctel Solarium"> <span
                     class="overlay">Solarium</span>
-                <img class="imagen-divImage5" src="img/IL messicano.jpg" alt="IL messicano"> <span class="overlay">IL messicano</span>
-                <img class="imagen-divImage5" src="img/Bellini Rosso.jpg" alt="Bellini Rosso"> <span class="overlay">Bellini rosso</span>
-                <img class="imagen-divImage5" src="img/Le moratto.jpg" alt="Le moratto"> <span
-                    class="overlay">Le moratto</span>
+                <img class="imagen-divImage5" src="img/IL messicano.jpg" alt="IL messicano"> <span class="overlay">IL
+                    messicano</span>
+                <img class="imagen-divImage5" src="img/Bellini Rosso.jpg" alt="Bellini Rosso"> <span
+                    class="overlay">Bellini rosso</span>
+                <img class="imagen-divImage5" src="img/Le moratto.jpg" alt="Le moratto"> <span class="overlay">Le
+                    moratto</span>
             </div>
         </div>
     </main>

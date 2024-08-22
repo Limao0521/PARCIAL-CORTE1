@@ -13,7 +13,7 @@ function abrirCarrito() {
 }
 
 
-function agregaraCarrito(){
+function agregaraCarrito() {
     const button = event.currentTarget;
     const contadorSpan = button.querySelector('.contador');
     let currentCount = parseInt(contadorSpan.textContent) || 0;
@@ -23,7 +23,7 @@ function agregaraCarrito(){
     let totalSum = 0;
 
     contadorElements.forEach(element => {
-         totalSum += parseInt(element.textContent) || 0;
+        totalSum += parseInt(element.textContent) || 0;
     });
 
     const contadorPrincipal = document.querySelector('.contador-principal');
