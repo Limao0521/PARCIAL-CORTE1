@@ -1,19 +1,21 @@
 const carrito = document.querySelector('.Carrito-compras');
-function abrirCarrito() {
-    const carritoVisible = carrito.classList.contains('visible'); // 2
-    const body = document.body; // 3
+const productos = document.querySelectorAll('.Producto');
 
-    if (carritoVisible) { // 4
-        carrito.classList.remove('visible'); // 5
-        body.classList.remove('no-scroll'); // 6
-    } else { // 7
-        carrito.classList.add('visible'); // 8
-        body.classList.add('no-scroll'); // 9
+function abrirCarrito() {
+    const carritoVisible = carrito.classList.contains('visible'); 
+    const body = document.body; 
+
+    if (carritoVisible) { 
+        carrito.classList.remove('visible'); 
+        body.classList.remove('no-scroll'); 
+    } else { 
+        carrito.classList.add('visible'); 
+        body.classList.add('no-scroll'); 
     }
 }
 
 
-function agregaraCarrito(){
+function agregaraCarrito() {
     const button = event.currentTarget;
     const contadorSpan = button.querySelector('.contador');
     let currentCount = parseInt(contadorSpan.textContent) || 0;
@@ -24,7 +26,7 @@ function agregaraCarrito(){
     let totalSum = 0;
 
     contadorElements.forEach(element => {
-         totalSum += parseInt(element.textContent) || 0;
+        totalSum += parseInt(element.textContent) || 0;
     });
 
     const contadorPrincipal = document.querySelector('.contador-principal');
