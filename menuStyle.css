@@ -294,6 +294,7 @@ p {
     margin-left: 20px; /* Separa el botón del borde derecho */
 }
 
+
 @media (max-width: 1000px) {
     .parent {
         grid-template-columns: 1fr;
