@@ -1,8 +1,18 @@
 
 function abrirCarrito() {
-    const carritoElement = document.querySelector('.Carrito-compras');
-    carritoElement.style.display = carritoElement.style.display === 'none' ? 'block' : 'none';
+    const carrito = document.querySelector('.Carrito-compras'); // 1
+    const carritoVisible = carrito.classList.contains('visible'); // 2
+    const body = document.body; // 3
+
+    if (carritoVisible) { // 4
+        carrito.classList.remove('visible'); // 5
+        body.classList.remove('no-scroll'); // 6
+    } else { // 7
+        carrito.classList.add('visible'); // 8
+        body.classList.add('no-scroll'); // 9
+    }
 }
+
 
 function agregaraCarrito(){
     const button = event.currentTarget;
