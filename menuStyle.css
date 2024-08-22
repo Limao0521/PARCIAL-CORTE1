@@ -7,6 +7,7 @@
     --button-bg-color: #9AA97B;
     --button-hover-bg-color: #EEBE02;
     --text-color-white: #ffffff;
+    --contador-bg-color: #b36416;
     --overlay-bg-color: rgba(0, 0, 0, 0.5);
     --font-size-h1: 2rem; 
     --font-size-h2: 1.5rem; 
@@ -186,6 +187,7 @@ h4 {
     cursor: pointer;
     transition: all 0.3s;
     border-radius: 25%;
+    position: relative; /* Para que el contador se posicione en relación al botón */
 }
 
 .agregar .material-symbols-outlined {
@@ -207,6 +209,62 @@ p {
     text-align: right;
 }
 
+.contador {
+    background-color: var(--contador-bg-color); 
+    color: var(--text-color-white);
+    padding: 2px 6px;
+    font-size: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 15px;
+    height: 15px;
+    line-height: 1;
+}
+
+.contador-principal {
+    background-color: var(--primary-color); 
+    color: var(--text-color-white);
+    padding: 2px 6px;
+    font-size: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 15px;
+    height: 15px;
+    line-height: 1;
+}
+
+.contador-principal:empty {
+    display: none;
+}
+
+.contador:empty {
+    display: none;
+}
+
+.agregar-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color: var(--contador-bg-color);
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 25%;
+    position: relative; 
+    color: var(--text-color-white);
+}
+
 @media (max-width: 1000px) {
     .parent {
         grid-template-columns: 1fr;
@@ -217,4 +275,18 @@ p {
     .img-div3 {
         grid-column: 1 / 2;
     }
+    .overlay {
+        font-size: 1rem; /* Ajustar tamaño de la fuente en dispositivos pequeños */
+    }
+}
+
+
+.Carrito-compras {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: var(--section-background-color);
+    border-radius: 0;
 }
