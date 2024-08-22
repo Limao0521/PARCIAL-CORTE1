@@ -325,7 +325,6 @@ p {
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
     z-index: 9999;
-    /* Asegura que el carrito esté encima de otros elementos */
 }
 
 .Carrito-compras.visible {
@@ -336,4 +335,49 @@ p {
 .no-scroll {
     overflow: hidden;
 }
+.cerrar-carrito:hover {
+    background-color: var(--secondary-color);
+    transition: all 0.3s;
+}
 
+/* header */
+.main-header {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color-white);
+    border-radius: 10px 10px 0 0;
+    box-shadow: #1E2130 0px 2px 5px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.main-menu {
+    list-style:georgian;
+    display: flex;
+    place-items: center;
+    justify-items: space-between;
+    align-items: center;
+
+}
+
+.menu-item {
+    margin-right: 20px;
+}
+
+.menu-item a {
+    color: var(--text-color-white);
+    text-decoration: none;
+    font-size: var(--font-size-h4);
+}
+
+.menu-item a:hover {
+    color: var(--highlight-color);
+    transition: color 0.3s ease;
+    border-bottom: 2px solid var(--highlight-color);
+}
