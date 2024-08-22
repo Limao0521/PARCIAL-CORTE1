@@ -18,6 +18,7 @@ function agregaraCarrito(){
     const contadorSpan = button.querySelector('.contador');
     let currentCount = parseInt(contadorSpan.textContent) || 0;
     contadorSpan.textContent = currentCount + 1;
+    contadorSpan.classList.remove('oculto_contador');
 
     const contadorElements = document.querySelectorAll('.contador');
     let totalSum = 0;
@@ -29,6 +30,20 @@ function agregaraCarrito(){
     const contadorPrincipal = document.querySelector('.contador-principal');
     contadorPrincipal.textContent = totalSum;
 }
+function vaciar_carrito() {
+    // Selecciona todos los elementos con clase 'contador'
+    const contadorElements = document.querySelectorAll('.contador');
+    
+    // Oculta los contadores
+    contadorElements.forEach(element => {
+      element.classList.add('oculto_contador');
+      element.textContent = "";
+    });
+    
+    // Actualiza el contador principal
+    const contadorPrincipal = document.querySelector('.contador-principal');
+    contadorPrincipal.textContent = "";
+  }
 
 function cerrarCarrito() {
     carrito.classList.remove('visible');

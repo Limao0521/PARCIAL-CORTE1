@@ -34,13 +34,26 @@
         <button class="agregar-principal" onclick="abrirCarrito()">
             <span class="material-symbols-outlined">add_shopping_cart</span>
             <span class="contador-principal"></span>
+        </button>
     </header>
     <main>
         <aside class="Carrito-compras">
             <div class="header-carrito">
                 <h1 class="titulo-carrito">Carrito de compras</h1>
                 <button class="cerrar-carrito" onclick="cerrarCarrito()">
-                    <span class="material-symbols-outlined">close</span>
+                    <span class="material-symbols-outlined">close</span> 
+                </button>   
+            </div>
+            <div class="cart-content">
+                <!-- Cart items will be listed here -->
+                <ul class="cart-items"></ul>
+                <!-- Total count and close button -->
+            <div class="cart-footer">
+                <button class="Vaciar" onclick="vaciar_carrito()">
+                    <span class="material-symbols-outlined">
+                        delete
+                        </span>
+                </button>
             </div>
         </aside>
         <div class="parent">
@@ -57,7 +70,7 @@
                         <div class="carrito">
                             <h4>Finas láminas de carne de res, aderezadas con aceite de oliva, limón, alcaparras y queso
                                 parmesano.</h4>
-                            <p>$40.900</p>
+                            <p class="precio">$40.900</p>
                         </div>
                     </div>
                     <div>
@@ -70,7 +83,7 @@
                         <div class="carrito">
                             <h4>Deliciosas croquetas crujientes por fuera y cremosas por dentro, rellenas de una mezcla
                                 de hongos salteados.</h4>
-                            <p>32.900</p>
+                            <p class="precio">32.900</p>
                         </div>
                     </div>
                     <div>
@@ -83,7 +96,7 @@
                         <div class="carrito">
                             <h4>Una ensalada fresca con burrata cremosa, tomates maduros, albahaca fresca y un toque de
                                 aceite de oliva y balsámico.</h4>
-                            <p>$49.900</p>
+                            <p class="precio">$49.900</p>
                         </div>
                     </div>
                     <div>
@@ -96,7 +109,7 @@
                         <div class="carrito">
                             <h4>Una selección variada de quesos, acompañada de frutas, nueces y mermeladas, perfecta
                                 para compartir.</h4>
-                            <p>$49.900</p>
+                            <p class="precio">$49.900</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +138,7 @@
                         <div class="carrito">
                             <h4>Pasta rellena de una mezcla suave de maíz dulce y queso ricotta, servida con una salsa
                                 ligera.</h4>
-                            <p>$41.900</p>
+                            <p class="precio">$41.900</p>
                         </div>
                     </div>
                     <div>
@@ -138,7 +151,7 @@
                         <div class="carrito">
                             <h4>Pasta rellena de carne de cangrejo, acompañada de una salsa cremosa que realza su sabor.
                             </h4>
-                            <p>$59.900</p>
+                            <p class="precio">$59.900</p>
                         </div>
                     </div>
                     <div>
@@ -151,7 +164,7 @@
                         <div class="carrito">
                             <h4>Pequeñas pastas rellenas de queso fontina, servidas con una salsa de mantequilla y
                                 salvia.</h4>
-                            <p>$47.900</p>
+                            <p class="precio">$47.900</p>
                         </div>
                     </div>
                     <div>
@@ -164,7 +177,7 @@
                         <div class="carrito">
                             <h4>Pasta rellena de trufa, con un sabor intenso y terroso, servida con una salsa de crema y
                                 trufa.</h4>
-                            <p>$84.900</p>
+                            <p class="precio">$84.900</p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +207,7 @@
                         <div class="carrito">
                             <h4>Un clásico postre italiano hecho con capas de bizcocho empapado en café, crema de
                                 mascarpone y cacao en polvo.</h4>
-                            <p>$31,900</p>
+                            <p class="precio">$31,900</p>
                         </div>
                     </div>
                     <div>
@@ -207,7 +220,7 @@
                         <div class="carrito">
                             <h4>Una tarta con una base crujiente, rellena de una crema de limón ácida y cubierta con
                                 merengue.</h4>
-                            <p>$30,000</p>
+                            <p class="precio">$30,000</p>
                         </div>
                     </div>
                     <div>
@@ -220,7 +233,7 @@
                         <div class="carrito">
                             <h4>Un elegante pastel de capas de bizcocho de almendra, crema de café y ganache de
                                 chocolate.</h4>
-                            <p>$40,000</p>
+                            <p class="precio">$40,000</p>
                         </div>
                     </div>
                     <div>
@@ -233,7 +246,7 @@
                         <div class="carrito">
                             <h4>Una tarta con una base de masa quebrada, rellena de manzanas caramelizadas y especias, a
                                 menudo servida con helado de vainilla.</h4>
-                            <p>$38,000</p>
+                            <p class="precio">$38,000</p>
                         </div>
                     </div>
                 </div>
@@ -261,7 +274,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Mango,durazno y piña.</h4>
-                            <p>$10,900</p>
+                            <p class="precio">$10,900</p>
                         </div>
                     </div>
                     <div>
@@ -273,7 +286,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Fresas, frambuesas y arándanos.</h4>
-                            <p>$10,900</p>
+                            <p class="precio">$10,900</p>
                         </div>
                     </div>
                     <div>
@@ -285,7 +298,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Mezcla de limón y leche de coco</h4>
-                            <p>$9,900</p>
+                            <p class="precio">$9,900</p>
                         </div>
                     </div>
                     <div>
@@ -297,7 +310,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Sin gas</h4>
-                            <p>$8,900</p>
+                            <p class="precio">$8,900</p>
                         </div>
                     </div>
                 </div>
@@ -323,7 +336,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Ron 7 años,Aperit,limón,dulce de flor de jamica,hierbabuena y Fever Tree ginger beer</h4>
-                            <p>$10,900</p>
+                            <p class="precio">$10,900</p>
                         </div>
                     </div>
                     <div>
@@ -335,7 +348,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Don Julio Blanco,miel de agave,limón,uchuvas y tajín</h4>
-                            <p>$10,900</p>
+                            <p class="precio">$10,900</p>
                         </div>
                     </div>
                     <div>
@@ -347,7 +360,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Mezcal Union,reducción de fresas con naranja,limón y prosecco</h4>
-                            <p>$9,900</p>
+                            <p class="precio">$9,900</p>
                         </div>
                     </div>
                     <div>
@@ -359,7 +372,7 @@
                         </h2>
                         <div class="carrito">
                             <h4>Destilado de feijoa,Vodka infusionado en té butterfly pea,licor marrasquino,limón y prosecco</h4>
-                            <p>$8,900</p>
+                            <p class="precio">$8,900</p>
                         </div>
                     </div>
                 </div>
