@@ -138,7 +138,7 @@ i.toggle-menu{
 }
 
 input#check{
-    /**display: none;**/
+    display: none;
 }
 
 @media (min-width: 880px){
@@ -237,19 +237,38 @@ input#check{
 }
 
 /* Presentation home section*/
-.wrap-section{
+.presentation-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.5)), url(img/Firefly\ Quiero\ que\ generes\ una\ imagen\ para\ un\ restaurante\ de\ pastas\,\ la\ imagen\ debe\ verse\ realista.\ .jpg);
+    flex-direction: column;
+    height: 100vh;
+}
+.developers{
+    background-color: wheat;
+}
+.developers h1{
+    color: black;
+    text-align: center;
+    margin: 0;
+    height: 50px;
+}
+.wrap-section-cards{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    min-height: 50vh;
-    background-color: var(--blue-c);
-    gap: 1rem;
+    min-height: 90vh;
+    background-color: transparent;
+    gap: 5rem;
 }
 .card{
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 410px;
 }
 .card .face{
     position: absolute;
@@ -314,5 +333,85 @@ input#check{
     transform: perspective(600px) rotateY(360deg);
 }
 
+/*Footer*/
 
+footer{
+    background-color: white;
+    color: var(--blue-c);
+}
+
+footer ul{
+    padding: 0;
+
+}
+
+.wrap-footer{
+    display: grid;
+    grid-template-columns: 30% 15% 15% 20%;
+    column-gap: 20%;
+    padding: 0.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+element-footer h5{
+    margin: 1rem 0;
+}
+
+.text-element-footer{
+    line-height: 2;
+}
+
+.text-element-footer li a{
+    color: var(--pasta-c);
+}
+
+.rs-element-footer ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rs-element-footer img{
+    width: 50px;
+}
+
+.rs-element-footer li{
+    margin-right: 1rem 1rem;
+}
+
+.footer-credentials{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: var(--green-c);
+    font-size: 0.9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.legal-credentials ul{
+    display: flex;
+}
+
+.legal-credentials ul li{
+    padding-right: 1rem;
+}
+
+.legal-credentials ul li a{
+    color: var(--green-c);
+}
+@media (max-width: 768px){
+    .wrap-footer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 480){
+    .wrap-footer{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width: 320px){
+    .footer-credentials{
+        flex-flow: column;
+    }
+}
 
