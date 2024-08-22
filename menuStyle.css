@@ -200,7 +200,7 @@ body {
     opacity: 1;
 }
 
-.div4 {
+.div5 {
     grid-column: 1 / 2;
 }
 
@@ -229,6 +229,7 @@ body {
 .img-div5 img:hover+.overlay {
     opacity: 1;
 }
+
 
 h1 {
     color: var(--primary-color);
