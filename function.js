@@ -243,3 +243,7 @@ function cerrarCarrito() {
     document.body.classList.remove('no-scroll');
     console.log('Carrito cerrado, desplazamiento habilitado');
 }
+
+function irCaja() {
+    window.location.href = 'caja.html';
+}
