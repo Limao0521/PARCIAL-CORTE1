@@ -202,6 +202,21 @@ input#check{
         top: 0;
         font-size: 2rem;
     }
+    button.agregar-principal{
+        display: none;
+    }
+    #check:checked ~ button.agregar-principal{
+        display: flex;
+        z-index: 9;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 3.5vh;
+        top: 15px;
+        margin-left: 85vw;
+
+        font-size: 2rem;
+    } 
 }
 
 /* Hero Section home-page*/
@@ -335,7 +350,7 @@ input#check{
 }
 @media(max-width: 768px){
     .presentation-cards{
-        height: 150vh;
+        height: 220vh;
     }
 }
 
