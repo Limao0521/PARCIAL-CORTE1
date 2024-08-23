@@ -618,7 +618,7 @@ p {
     position: fixed;
     top: 0;
     right: 0;
-    width: 28%;
+    width: 32%;
     height: 100vh;
     max-height: 100vh;
     background-color: var(--carrito-color);
