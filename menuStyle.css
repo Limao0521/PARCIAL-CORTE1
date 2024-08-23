@@ -873,3 +873,34 @@ p {
 #mock {
     display: none;
 }
+
+.div1 h4{
+    font-size: 1rem;
+}
+.div1 h2{
+    font-size: 1.5rem;
+}
+.div2 h4{
+    font-size: 1rem;
+}
+.div2 h2{
+    font-size: 1.5rem;
+}
+.div3 h4{
+    font-size: 1rem;
+}
+.div3 h2{
+    font-size: 1.5rem;
+}
+.div4 h4{
+    font-size: 1rem;
+}
+.div4 h2{
+    font-size: 1.5rem;
+}
+.div5 h4{
+    font-size: 1rem;
+}
+.div5 h2{
+    font-size: 1.5rem;
+}
