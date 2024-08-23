@@ -46,7 +46,6 @@ function agregarProducto(nombre, precio) {
         nuevoProductoDiv.innerHTML = `
             <h4 class="nombre-producto">${nombre}</h4>
             <span class="cantidad">
-                <p>Cantidad: </p>
                 <button onclick="actualizarCantidad('${nombre}', 1)">+</button>
                 <span class="cantidad-producto">1</span>
                 <button onclick="actualizarCantidad('${nombre}', -1)">-</button>
