@@ -14,6 +14,7 @@ function abrirCarrito() {
     }
 }
 
+
 function agregarProducto(nombre, precio) {
     const contenedorCarrito = document.querySelector('.productos-carrito');
 
@@ -138,15 +139,17 @@ function eliminarProducto(productoDiv) {
     // Obtener el nombre del producto
     const nombreProducto = productoDiv.querySelector('.nombre-producto').textContent;
 
-    // Poner en cero el contador del botón de agregar producto en el carrito
+    // Restar la cantidad del producto eliminado del contador del botón de agregar producto en el carrito
     const botonAgregar = document.getElementById(`Carpaccio-veneciano`); // Asegúrate de que el ID sea correcto
     const contadorAgregar = botonAgregar.querySelector('.contador');
-    contadorAgregar.textContent = 0;
+    const cantidadActual = parseInt(contadorAgregar.textContent) || 0;
+    contadorAgregar.textContent = cantidadActual - cantidadProducto;
 
-    // Poner en cero el contador del botón de agregar principal
+    // Restar la cantidad del producto eliminado del contador del botón de agregar principal
     const botonAgregarPrincipal = document.querySelector('.agregar-principal'); // Asegúrate de que la clase sea correcta
     const contadorPrincipal = botonAgregarPrincipal.querySelector('.contador-principal');
-    contadorPrincipal.textContent = 0;
+    const cantidadTotal = parseInt(contadorPrincipal.textContent) || 0;
+    contadorPrincipal.textContent = cantidadTotal - cantidadProducto;
 
     // Eliminar el producto del contenedor
     productoDiv.remove();
@@ -158,7 +161,6 @@ function eliminarProducto(productoDiv) {
         asideCarrito.style.display = 'none';
     }
 }
-
 
 function agregaraCarrito() {
     const button = event.currentTarget;

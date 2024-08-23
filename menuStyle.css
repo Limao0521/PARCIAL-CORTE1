@@ -290,24 +290,9 @@ h4 {
 p {
     text-align: right;
 }
-
-.contador {
-    background-color: var(--contador-bg-color);
-    color: var(--text-color-white);
-    padding: 2px 6px;
-    font-size: 14px;
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 15px;
-    height: 15px;
-    line-height: 1;
+.contador{
+    display:none;
 }
-
 .contador-principal {
     background-color: var(--button-hover-bg-color);
     color: var(--text-color-white);
@@ -411,9 +396,7 @@ p {
     font-size: 18px;
     font-weight: bold;
 }
-.oculto_contador {
-    display: none;
-  }
+
 .cerrar-carrito {
     display: inline-flex;
     align-items: center;
