@@ -1,5 +1,6 @@
 const carrito = document.querySelector('.Carrito-compras');
-
+let subtotal = 0;
+let total = 0;
 function abrirCarrito() {
     const carritoVisible = carrito.classList.contains('visible');
     const body = document.body;
@@ -66,6 +67,9 @@ function agregarProducto(nombre, precio) {
 
     // Actualizar contador de botones agregar
     actualizarContador(nombre);
+
+    calcularSubtotal();
+    calcularTotal();
 }
 
 function actualizarContador(nombre, incremento) {
@@ -129,6 +133,7 @@ function modificarCantidad(cantidadSpan, cambio, precio) {
     const precioTotal = precio * cantidad;
     const precioProducto = cantidadSpan.closest('.producto').querySelector('.precio');
     precioProducto.textContent = `Precio: $${precioTotal}`;
+    
 }
 
 function eliminarProducto(productoDiv) {
@@ -157,6 +162,8 @@ function eliminarProducto(productoDiv) {
         const asideCarrito = document.querySelector('aside');
         asideCarrito.style.display = 'none';
     }
+    calcularSubtotal();
+    calcularTotal();
 }
 
 function agregaraCarrito() {
@@ -200,3 +207,19 @@ function cerrarCarrito() {
     document.body.classList.remove('no-scroll');
     console.log('Carrito cerrado, desplazamiento habilitado');
 }
+
+function calcularSubtotal() {
+    subtotal = 0;
+    const productos = document.querySelectorAll('.producto');
+    productos.forEach(producto => {
+      const precio = parseFloat(producto.querySelector('.precio').textContent.replace('Precio: $', ''));
+      const cantidad = parseInt(producto.querySelector('.cantidad-producto').textContent);
+      subtotal += precio * cantidad;
+    })
+    document.getElementById('Subtotal').textContent = subtotal.toFixed(2);
+  }
+
+  function calcularTotal() {
+    document.getElementById('Total').textContent = subtotal.toFixed(2);
+  }
+
