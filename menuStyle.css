@@ -643,3 +643,7 @@ p {
         padding: 20px;
       }
 }
+
+#mock {
+    display: none;
+}
