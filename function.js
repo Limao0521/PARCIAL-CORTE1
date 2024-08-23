@@ -1,6 +1,5 @@
 const carrito = document.querySelector('.Carrito-compras');
 
-
 function abrirCarrito() {
     const carritoVisible = carrito.classList.contains('visible');
     const body = document.body;
@@ -31,7 +30,7 @@ function agregarProducto(nombre, precio) {
         // Producto ya existe, actualizar la cantidad y el precio
         const cantidadSpan = productoExistente.querySelector('.cantidad-producto');
         const cantidadActual = parseInt(cantidadSpan.textContent) || 0;
-        const cantidad=1;
+        const cantidad = 1;
         const nuevoCantidad = cantidadActual + cantidad;
         cantidadSpan.textContent = nuevoCantidad;
 
@@ -72,23 +71,23 @@ function agregarProducto(nombre, precio) {
 function actualizarContador(nombre, incremento) {
     const botonAgregar = document.querySelector(`#${nombre.replace(/\s+/g, '-')}`);
     if (!botonAgregar) return;
-  
+
     const contadorAgregar = botonAgregar.querySelector('.contador');
     const cantidadActual = parseInt(contadorAgregar.textContent) || 0;
-  
+
     if (incremento > 0) {
-      contadorAgregar.textContent = cantidadActual + 1;
+        contadorAgregar.textContent = cantidadActual + 1;
     } else if (incremento < 0) {
-      contadorAgregar.textContent = Math.max(0, cantidadActual - 1);
+        contadorAgregar.textContent = Math.max(0, cantidadActual - 1);
     }
-    
+
     // Actualizar el contador del botón de agregar principal
     const botonAgregarPrincipal = document.querySelector('.agregar-principal');
     const contadorPrincipal = botonAgregarPrincipal.querySelector('.contador-principal');
     const cantidadTotal = Array.from(document.querySelectorAll('.cantidad-producto'))
-                                .reduce((sum, el) => sum + (parseInt(el.textContent) || 0), 0);
+        .reduce((sum, el) => sum + (parseInt(el.textContent) || 0), 0);
     contadorPrincipal.textContent = cantidadTotal;
-  }
+}
 
 function actualizarCantidad(nombre, incremento) {
     const contenedorCarrito = document.querySelector('.productos-carrito');
@@ -113,13 +112,13 @@ function actualizarCantidad(nombre, incremento) {
 
     // Actualizar contador del botón agregar
     actualizarContador(nombre);
-}   
+}
 
 
 function modificarCantidad(cantidadSpan, cambio, precio) {
     let cantidad = parseInt(cantidadSpan.textContent);
     cantidad += cambio;
-    
+
     if (cantidad < 1) {
         cantidad = 1;
     }
@@ -139,17 +138,15 @@ function eliminarProducto(productoDiv) {
     // Obtener el nombre del producto
     const nombreProducto = productoDiv.querySelector('.nombre-producto').textContent;
 
-    // Restar la cantidad del producto eliminado del contador del botón de agregar producto en el carrito
+    // Restar la cantidad del producto del contador del botón de agregar producto en el carrito
     const botonAgregar = document.getElementById(`Carpaccio-veneciano`); // Asegúrate de que el ID sea correcto
     const contadorAgregar = botonAgregar.querySelector('.contador');
-    const cantidadActual = parseInt(contadorAgregar.textContent) || 0;
-    contadorAgregar.textContent = cantidadActual - cantidadProducto;
+    contadorAgregar.textContent = parseInt(contadorAgregar.textContent) - cantidadProducto;
 
-    // Restar la cantidad del producto eliminado del contador del botón de agregar principal
+    // Restar la cantidad del producto del contador del botón de agregar principal
     const botonAgregarPrincipal = document.querySelector('.agregar-principal'); // Asegúrate de que la clase sea correcta
     const contadorPrincipal = botonAgregarPrincipal.querySelector('.contador-principal');
-    const cantidadTotal = parseInt(contadorPrincipal.textContent) || 0;
-    contadorPrincipal.textContent = cantidadTotal - cantidadProducto;
+    contadorPrincipal.textContent = parseInt(contadorPrincipal.textContent) - cantidadProducto;
 
     // Eliminar el producto del contenedor
     productoDiv.remove();
@@ -182,17 +179,17 @@ function agregaraCarrito() {
 function vaciar_carrito() {
     // Selecciona todos los elementos con clase 'contador'
     const contadorElements = document.querySelectorAll('.contador');
-    
+
     // Oculta los contadores
     contadorElements.forEach(element => {
-      element.classList.add('oculto_contador');
-      element.textContent = "";
+        element.classList.add('oculto_contador');
+        element.textContent = "";
     });
-    
+
     // Actualiza el contador principal
     const contadorPrincipal = document.querySelector('.contador-principal');
     contadorPrincipal.textContent = "";
-  }
+}
 
 function cerrarCarrito() {
     carrito.classList.remove('visible');
