@@ -412,23 +412,6 @@ p {
     /* Separa el botón del borde derecho */
 }
 
-@media (max-width: 1000px) {
-    .parent {
-        grid-template-columns: 1fr;
-    }
-
-    .img-div1,
-    .img-div2,
-    .img-div3 {
-        grid-column: 1 / 2;
-    }
-
-    .overlay {
-        font-size: 1rem;
-        /* Ajustar tamaño de la fuente en dispositivos pequeños */
-    }
-}
-
 .Carrito-compras.visible {
     transform: translateX(0);
     opacity: 1;
@@ -633,4 +616,30 @@ p {
 
 .eliminar:hover {
     background-color: var(--secondary-color);
+}
+
+@media (max-width: 1000px) {
+    .parent {
+        grid-template-columns: 1fr;
+    }
+
+    .img-div1,
+    .img-div2,
+    .img-div3 {
+        grid-column: 1 / 2;
+    }
+
+    .overlay {
+        font-size: 1rem;
+        /* Ajustar tamaño de la fuente en dispositivos pequeños */
+    }
+    .Carrito-compras {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* ancho del carrito en pantallas pequeñas */
+        height: 100vh; /* altura del carrito en pantallas pequeñas */
+        background-color:var(--carrito-color);
+        padding: 20px;
+      }
 }
