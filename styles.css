@@ -9,6 +9,7 @@
 
 html{
     font-family: "Cinzel", serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -248,7 +249,7 @@ input#check{
     height: 100vh;
 }
 .developers{
-    background-color: wheat;
+    background-color: #FAF3E0;
 }
 .developers h1{
     color: black;
@@ -343,7 +344,7 @@ input#check{
 
 
 footer{
-    background-color: white;
+    background-color: #FAF3E0;
     color: var(--blue-c);
 }
 
@@ -359,6 +360,7 @@ footer ul{
     padding: 0.5rem;
     margin: 2rem auto;
     max-width: 1200px;
+    margin: 0;
 }
 
 element-footer h5{
