@@ -68,21 +68,26 @@ function agregarProducto(nombre, precio) {
     actualizarContador(nombre);
 }
 
-function actualizarContador(nombre) {
-    const botonAgregar = document.querySelector(`#${nombre.replace(/\s+/g, '-')}`); // Ajustar el ID basado en el nombre del producto
-    if (!botonAgregar) return; // Si el botón no existe, salir de la función
-
+function actualizarContador(nombre, incremento) {
+    const botonAgregar = document.querySelector(`#${nombre.replace(/\s+/g, '-')}`);
+    if (!botonAgregar) return;
+  
     const contadorAgregar = botonAgregar.querySelector('.contador');
     const cantidadActual = parseInt(contadorAgregar.textContent) || 0;
-    contadorAgregar.textContent = cantidadActual + 1;
-
+  
+    if (incremento > 0) {
+      contadorAgregar.textContent = cantidadActual + 1;
+    } else if (incremento < 0) {
+      contadorAgregar.textContent = Math.max(0, cantidadActual - 1);
+    }
+  
     // Actualizar el contador del botón de agregar principal
-    const botonAgregarPrincipal = document.querySelector('.agregar-principal'); // Asegúrate de que la clase sea correcta
+    const botonAgregarPrincipal = document.querySelector('.agregar-principal');
     const contadorPrincipal = botonAgregarPrincipal.querySelector('.contador-principal');
     const cantidadTotal = Array.from(document.querySelectorAll('.cantidad-producto'))
                                 .reduce((sum, el) => sum + (parseInt(el.textContent) || 0), 0);
     contadorPrincipal.textContent = cantidadTotal;
-}
+  }
 
 function actualizarCantidad(nombre, incremento) {
     const contenedorCarrito = document.querySelector('.productos-carrito');
