@@ -80,7 +80,7 @@ function actualizarContador(nombre, incremento) {
     } else if (incremento < 0) {
       contadorAgregar.textContent = Math.max(0, cantidadActual - 1);
     }
-  
+    
     // Actualizar el contador del botón de agregar principal
     const botonAgregarPrincipal = document.querySelector('.agregar-principal');
     const contadorPrincipal = botonAgregarPrincipal.querySelector('.contador-principal');
@@ -138,17 +138,15 @@ function eliminarProducto(productoDiv) {
     // Obtener el nombre del producto
     const nombreProducto = productoDiv.querySelector('.nombre-producto').textContent;
 
-    // Disminuir el contador del botón de agregar producto en el carrito
+    // Poner en cero el contador del botón de agregar producto en el carrito
     const botonAgregar = document.getElementById(`Carpaccio-veneciano`); // Asegúrate de que el ID sea correcto
     const contadorAgregar = botonAgregar.querySelector('.contador');
-    const cantidadActual = parseInt(contadorAgregar.textContent) || 0;
-    contadorAgregar.textContent = Math.max(0, cantidadActual - cantidadProducto);
+    contadorAgregar.textContent = 0;
 
-    // Disminuir el contador del botón de agregar principal
+    // Poner en cero el contador del botón de agregar principal
     const botonAgregarPrincipal = document.querySelector('.agregar-principal'); // Asegúrate de que la clase sea correcta
     const contadorPrincipal = botonAgregarPrincipal.querySelector('.contador-principal');
-    const cantidadPrincipalActual = parseInt(contadorPrincipal.textContent) || 0;
-    contadorPrincipal.textContent = Math.max(0, cantidadPrincipalActual - cantidadProducto);
+    contadorPrincipal.textContent = 0;
 
     // Eliminar el producto del contenedor
     productoDiv.remove();
