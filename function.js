@@ -189,6 +189,10 @@ function vaciar_carrito() {
     // Actualiza el contador principal
     const contadorPrincipal = document.querySelector('.contador-principal');
     contadorPrincipal.textContent = "";
+
+    // Vacía el contenido del contenedor del carrito
+    const contenedorCarrito = document.querySelector('.productos-carrito');
+    contenedorCarrito.innerHTML = ''; // Elimina todos los elementos hijos del contenedor
 }
 
 function cerrarCarrito() {
