@@ -30,7 +30,8 @@ function agregarProducto(nombre, precio) {
         // Producto ya existe, actualizar la cantidad y el precio
         const cantidadSpan = productoExistente.querySelector('.cantidad-producto');
         const cantidadActual = parseInt(cantidadSpan.textContent) || 0;
-        const nuevoCantidad = cantidadActual + 1;
+        const cantidad=1;
+        const nuevoCantidad = cantidadActual + cantidad;
         cantidadSpan.textContent = nuevoCantidad;
 
         // Actualizar el precio total del producto en el carrito
