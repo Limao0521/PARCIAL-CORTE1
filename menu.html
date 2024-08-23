@@ -43,13 +43,14 @@
                   <li class="menu-item"><a href="menu.html">Menú</a></li>
                   <li class="menu-item"><a href="index.html #presentacion">Información</a></li>                    
                 </ul>
+                <button class="agregar-principal" onclick="abrirCarrito()">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    <span class="contador-principal"></span>
+                </button>
               </nav>
             </div>
           </div>
-        <button class="agregar-principal" onclick="abrirCarrito()">
-            <span class="material-symbols-outlined">add_shopping_cart</span>
-            <span class="contador-principal"></span>
-        </button>
+        
     </header>
     <main>
         <aside class="Carrito-compras">
@@ -100,7 +101,7 @@
                         <span class="total"></span>
                     </div>
                 </div>
-                <button class="boton-pagar">Ir a pagar</button>
+                <button class="boton-pagar" onclick="irCaja()">Ir a pagar</button>
             </div>
         </aside>
         <div class="parent">
