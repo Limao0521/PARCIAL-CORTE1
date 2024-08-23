@@ -350,7 +350,7 @@ input#check{
 }
 @media(max-width: 768px){
     .presentation-cards{
-        height: 150vh;
+        height: 220vh;
     }
 }
 
